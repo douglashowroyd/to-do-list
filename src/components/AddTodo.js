@@ -2,13 +2,13 @@ import '../App.css';
 import React, {useState} from "react";
 
 
-function AddTodo(addToDoList) {
+function AddTodo(props) {
 
     const [input, setInput] = useState("");
 
-    /*let addTodo = function () {
-        addToDoList(input)
-        setInput('')
+    function handleClick() {
+        props.addTodo(input)
+        setInput("")
     }
 
     return (
@@ -17,12 +17,11 @@ function AddTodo(addToDoList) {
                 onChange={e => setInput(e.target.value)}
                 value={input}
             />
-            <button className="add-todo" onClick={addTodo}>
-                Add to do
+            <button className="add-todo" onClick={handleClick}>
+                Add item
             </button>
         </div>
-    );*/
-    return(<div>a</div>)
+    );
 }
 
 export default AddTodo
